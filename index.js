@@ -6,6 +6,7 @@ const { auth, workspace, repo_slug } = require("./config");
 
 const bitbucket = new Bitbucket({ auth });
 
+// TODO: Add more options instead of config
 const options = yargs
   .usage("Usage: -n <name>")
   .option("n", {
@@ -15,6 +16,7 @@ const options = yargs
     demandOption: true,
   }).argv;
 
+// TODO: Add try catch for requests
 const setPackageJSONContent = async (options) => {
   const { data } = await bitbucket.repositories.get({
     workspace,
@@ -24,6 +26,7 @@ const setPackageJSONContent = async (options) => {
   return getNewPackageJson(data, options);
 };
 
+// TODO: Add try catch for requests
 const createACommit = async (JSONContent) => {
   const option = {
     _body: {
@@ -41,6 +44,7 @@ const createACommit = async (JSONContent) => {
   console.log("Changes committed");
 };
 
+// TODO: Add try catch for requests
 const createPullRequest = async () => {
     await createACommit(setPackageJSONContent(options));
     console.log("Creating Pull Request");
