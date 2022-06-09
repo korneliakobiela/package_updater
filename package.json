@@ -9,8 +9,7 @@
   "author": "Kornelia Kobiela",
   "license": "MIT",
   "dependencies": {
-    "boxen": "4.0",
-    "chalk": "2.4",
+    "bitbucket": "^2.7.0",
     "yargs": "^17.5.1"
   }
 }
