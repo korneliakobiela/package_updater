@@ -1,6 +1,7 @@
 const parseName = (name) => {
   const [package, version] = name.split('@');
   // TODO: Parse latest version to proper number version from npm registry
+  //TODO: Add multiple package handling
   return {
     package,
     version: version ? version : "latest"

@@ -2,7 +2,7 @@ const { Bitbucket } = require("bitbucket");
 const yargs = require("yargs");
 
 const { getNewPackageJson } = require("./utils.js");
-const { auth, workspace, repo_slug } = require("./config");
+const { auth, workspace, repo_slug } = require("./config.js");
 
 const bitbucket = new Bitbucket({ auth });
 
